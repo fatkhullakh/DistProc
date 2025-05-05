@@ -1,55 +1,48 @@
-README: Distributed Processing Project
+# 🎲 Distributed Processing Project
 
-Project Title: Two-Player Turn-Based Game (Dice and Board Logic)
+## 📌 Project Title: Two-Player Turn-Based Dice Game
 
-This is a simple multiplayer board game made for the Distributed Processing course.
+Welcome! This is a simple but fun multiplayer game made for the **Distributed Processing** course.  
+It’s a console-based, turn-by-turn game with dice logic, network communication, and strategy.
 
-The game is turn-based, and two players play against each other over a network.
-One player is White, the other is Black. They take turns rolling dice and moving their pieces on the board.
+---
 
-How It Works
+## 🎮 How It Works
 
-The server runs on one computer.
+🖥️ One machine runs the **server**.  
+🎯 Two players connect from clients (can be same or different PCs).  
+📡 They play in real-time over a local network (LAN).  
+📦 No graphics — everything is done in the terminal.
 
-Two players connect to the server using the client app (can be on the same or different machines).
+---
 
-The game is displayed in the console.
+## 📏 Game Rules
 
-Game Rules (Simple Version)
+- 🎲 Each turn, a player rolls **2 dice**.
+- ➕ If the dice are **different** → the player makes **2 moves**.
+- ⚔️ Players can **only move their own pieces**.
+- 💣 The game ends when a player moves all his pieces out of board.
 
-Each turn, a player rolls 2 dice.
+---
 
-If both dice are different (e.g. 3 and 5), the player can make 2 moves.
+## 🕹️ Controls
 
-If both dice are the same (e.g. 6 and 6), the player gets 4 moves.
+1. You'll see the board and your dice.
+2. Enter the field number to **move FROM**.
+3. Then enter the field number to **move TO**.
+4. Want to skip? Type `0` (only allowed when no valid moves are left).
 
-The player can only move their own pieces.
+---
 
-The game ends when one player captures all of the other player's pieces.
+## 🚀 How to Run It
 
-Controls
-
-During your turn:
-
-You will see the board and your dice.
-
-First, enter the field number you want to move from.
-
-If it's not your piece, or it can't move, you will be told.
-
-Then, enter the field number you want to move to.
-
-To skip your turn (if no moves are possible), type 0.
-
-How to Run
-
-Server
+### 🛠️ Server
 
 Open the Server.exe on one machine.
 
 Wait until it says: Waiting for 2 players to connect...
 
-Client
+### 🧑‍💻 Clients
 
 Open Client.exe on two separate terminals or two different machines.
 
@@ -59,35 +52,6 @@ Compile and run the clients.
 
 Important: All devices must be on the same local network (Wi-Fi or Ethernet).
 
-Files Included
 
-Server.cpp: Game server logic
+## 🗂️ Project Structure
 
-Client.cpp: Player-side application
-
-GameLogic.cpp/h: Game rules and logic functions
-
-game_log.txt: File where all moves and events are recorded
-
-Authors
-
-Fatkhullakh Turakhonov (Index: 192066)
-Mark Slipenkyi (Index: 196668)
-
-Notes
-
-Use Windows Firewall settings to allow TCP port 54000 for server.
-
-If testing on one PC, use 127.0.0.1 as the server IP.
-
-If using two machines, use the IPv4 address of the server PC.
-
-Final Tips
-
-Always run the server before the clients.
-
-Make sure the client connects to the correct IP address.
-
-You can quit the game by closing the window.
-
-Good luck and have fun playing!
